@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - Hospital</title>
+    <link rel="stylesheet" href="agendamento.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="especialidades.html">Especialidades</a>
+        <a href="profissionais.html">Profissionais</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="agendamento.html">Agendamento</a>
+    </nav>
+
+    <hr>
+
+    <h1>Simulação de Agendamento</h1>
+
+    <form id="formAgendamento">
+        <label for="especialidade">Especialidade:</label>
+        <select id="especialidade" required>
+            <option value="">Selecione...</option>
+            <option value="Cardiologia">Cardiologia</option>
+            <option value="Pediatria">Pediatria</option>
+            <option value="Ortopedia">Ortopedia</option>
+        </select>
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" required>
+
+        <label for="horario">Horário:</label>
+        <input type="time" id="horario" required>
+
+        <button type="submit">Simular Agendamento</button>
+    </form>
+
+    <div id="resumo" class="resumo">
+        <h3>Resumo da Consulta</h3>
+        <p><strong>Especialidade:</strong> <span id="resEspecialidade"></span></p>
+        <p><strong>Data:</strong> <span id="resData"></span></p>
+        <p><strong>Horário:</strong> <span id="resHorario"></span></p>
+        <small><em>*Esta é apenas uma simulação demonstrativa.</em></small>
+    </div>
+
+    <script>
+        document.getElementById('formAgendamento').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            document.getElementById('resEspecialidade').textContent = document.getElementById('especialidade').value;
+            document.getElementById('resData').textContent = document.getElementById('data').value;
+            document.getElementById('resHorario').textContent = document.getElementById('horario').value;
+            
+            document.getElementById('resumo').style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>
