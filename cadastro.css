@@ -1,0 +1,241 @@
+:root {
+    color-scheme: light;
+    --navy: #15366d;
+    --navy-deep: #102a55;
+    --blue: #2874ad;
+    --blue-soft: #e9f4fb;
+    --aqua: #42b6ad;
+    --ink: #20334b;
+    --muted: #62758b;
+    --line: #d7e3ec;
+    --shadow: 0 18px 48px rgba(27, 62, 101, 0.11);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    min-width: 320px;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: 28px 24px 72px;
+    background:
+        radial-gradient(ellipse at 85% 8%, rgba(166, 225, 228, 0.24), transparent 30rem),
+        linear-gradient(145deg, #f8fbfd 0%, #edf5fa 55%, #f8fbfd 100%);
+    color: var(--ink);
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+nav {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: min(1120px, 100%);
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 0 auto;
+    padding: 10px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.88);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: 0 8px 28px rgba(29, 63, 96, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    animation: page-entrance 650ms ease-out both;
+}
+
+nav a {
+    padding: 9px 15px;
+    border-radius: 10px;
+    color: #435b75;
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    transform: translateY(-1px);
+    background: var(--blue-soft);
+    color: var(--navy);
+    outline: none;
+}
+
+hr {
+    display: none;
+}
+
+h1 {
+    width: min(560px, 100%);
+    margin: clamp(36px, 7vh, 66px) auto 23px;
+    color: var(--navy-deep);
+    font-size: clamp(1.9rem, 4vw, 2.65rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.16;
+    animation: page-entrance 700ms 80ms ease-out both;
+}
+
+h1::after {
+    display: block;
+    width: 48px;
+    height: 3px;
+    margin-top: 18px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, var(--navy), var(--aqua));
+    content: "";
+}
+
+#formCadastro {
+    display: grid;
+    width: min(560px, 100%);
+    gap: 9px;
+    margin: 0 auto;
+    padding: clamp(24px, 5vw, 42px);
+    border: 1px solid rgba(255, 255, 255, 0.92);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: var(--shadow);
+    animation: page-entrance 700ms 140ms ease-out both;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+#formCadastro label {
+    margin-top: 9px;
+    color: #354d67;
+    font-size: 0.92rem;
+    font-weight: 650;
+}
+
+#formCadastro input {
+    width: 100%;
+    min-height: 50px;
+    padding: 12px 15px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fbfdfe;
+    color: var(--ink);
+    font: inherit;
+    transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+#formCadastro input::placeholder {
+    color: #91a1b1;
+}
+
+#formCadastro input:hover {
+    border-color: #b7cbd9;
+}
+
+#formCadastro input:focus {
+    border-color: var(--blue);
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(40, 116, 173, 0.12);
+    outline: none;
+}
+
+#formCadastro button {
+    min-height: 52px;
+    margin-top: 17px;
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 13px;
+    background: linear-gradient(110deg, var(--navy), #2874ad 72%, #339d9b);
+    box-shadow: 0 10px 22px rgba(21, 54, 109, 0.2);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    transition: box-shadow 200ms ease, transform 200ms ease, filter 200ms ease;
+}
+
+#formCadastro button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(21, 54, 109, 0.26);
+    filter: brightness(1.06);
+}
+
+#formCadastro button:focus-visible {
+    outline: 3px solid rgba(66, 182, 173, 0.56);
+    outline-offset: 3px;
+}
+
+#formCadastro button:active {
+    transform: translateY(0);
+}
+
+#mensagem:not(:empty) {
+    width: min(560px, 100%);
+    margin: 18px auto 0;
+    padding: 15px 18px;
+    border: 1px solid rgba(66, 182, 173, 0.34);
+    border-radius: 14px;
+    background: rgba(231, 248, 245, 0.92);
+    box-shadow: 0 8px 20px rgba(27, 92, 87, 0.07);
+    color: #176e68;
+    font-weight: 600;
+    animation: page-entrance 350ms ease-out both;
+}
+
+@keyframes page-entrance {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 620px) {
+    body {
+        padding: 14px 14px 40px;
+    }
+
+    nav {
+        gap: 2px;
+        padding: 8px;
+        border-radius: 15px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 0.84rem;
+    }
+
+    h1 {
+        margin: 34px auto 20px;
+    }
+
+    #formCadastro {
+        padding: 25px 21px;
+        border-radius: 21px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
