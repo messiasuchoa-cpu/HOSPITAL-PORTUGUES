@@ -99,6 +99,13 @@ h1::after {
     content: "";
 }
 
+.aviso-horarios {
+    width: min(1120px, 100%);
+    margin: -12px auto 24px;
+    color: var(--muted);
+    font-size: 0.94rem;
+}
+
 .grid {
     display: grid;
     width: min(1120px, 100%);
@@ -161,6 +168,29 @@ h1::after {
     color: var(--muted);
     font-size: 0.98rem;
     line-height: 1.7;
+}
+
+.card .agenda-profissional {
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid var(--line);
+    color: var(--ink);
+    font-size: 0.93rem;
+    line-height: 1.8;
+}
+
+.card .agenda-profissional strong {
+    color: var(--navy);
+}
+
+.sem-profissionais {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    padding: 22px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fff;
+    color: var(--muted);
 }
 
 @keyframes page-entrance {
