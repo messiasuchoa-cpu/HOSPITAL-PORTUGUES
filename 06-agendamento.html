@@ -19,6 +19,8 @@
 
     <hr>
 
+    <p id="aviso-acesso" class="aviso-acesso" role="alert" hidden></p>
+
     <h1>Simulação de Agendamento</h1>
 
     <form id="formAgendamento">
@@ -26,6 +28,13 @@
         <select id="especialidade" required>
             <option value="">Selecione...</option>
             <option value="Cardiologia">Cardiologia</option>
+            <option value="Neurologia">Neurologia</option>
+            <option value="Ginecologia e Obstetrícia">Ginecologia e Obstetrícia</option>
+            <option value="Dermatologia">Dermatologia</option>
+            <option value="Oftalmologia">Oftalmologia</option>
+            <option value="Endocrinologia">Endocrinologia</option>
+            <option value="Gastroenterologia">Gastroenterologia</option>
+            <option value="Urologia">Urologia</option>
             <option value="Pediatria">Pediatria</option>
             <option value="Ortopedia">Ortopedia</option>
         </select>
@@ -47,17 +56,7 @@
         <small><em>*Esta é apenas uma simulação demonstrativa.</em></small>
     </div>
 
-    <script>
-        document.getElementById('formAgendamento').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            document.getElementById('resEspecialidade').textContent = document.getElementById('especialidade').value;
-            document.getElementById('resData').textContent = document.getElementById('data').value;
-            document.getElementById('resHorario').textContent = document.getElementById('horario').value;
-            
-            document.getElementById('resumo').style.display = 'block';
-        });
-    </script>
+    <script src="agendamento.js"></script>
 
 </body>
 </html>

@@ -183,6 +183,35 @@ h1::after {
     color: var(--navy);
 }
 
+.botao-agendamento {
+    display: inline-flex;
+    min-height: 46px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px 17px;
+    border-radius: 12px;
+    background: linear-gradient(110deg, var(--navy), #2874ad 72%, #339d9b);
+    box-shadow: 0 8px 18px rgba(21, 54, 109, 0.18);
+    color: #fff;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow 200ms ease, transform 200ms ease, filter 200ms ease;
+}
+
+.botao-agendamento:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(21, 54, 109, 0.25);
+    filter: brightness(1.06);
+}
+
+.botao-agendamento:focus-visible {
+    outline: 3px solid rgba(66, 182, 173, 0.56);
+    outline-offset: 3px;
+}
+
 .sem-profissionais {
     width: min(1120px, 100%);
     margin: 0 auto;

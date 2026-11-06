@@ -20,6 +20,7 @@
     <hr>
 
     <h1>Cadastro Demonstrativo</h1>
+    <p class="nota-cadastro">Demonstração: o status do cadastro fica salvo apenas neste navegador; nenhum dado é enviado ao hospital.</p>
 
     <form id="formCadastro">
         <label for="nome">Nome Completo:</label>
@@ -36,14 +37,7 @@
 
     <div id="mensagem"></div>
 
-    <script>
-        document.getElementById('formCadastro').addEventListener('submit', function(e) {
-            e.preventDefault(); // Impede o envio real da página
-            const nome = document.getElementById('nome').value;
-            document.getElementById('mensagem').textContent = `Cadastro de ${nome} realizado com sucesso! (Demonstração)`;
-            this.reset();
-        });
-    </script>
+    <script src="cadastro.js"></script>
 
 </body>
 </html>

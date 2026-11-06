@@ -99,6 +99,17 @@ h1::after {
     content: "";
 }
 
+.aviso-acesso:not([hidden]) {
+    width: min(620px, 100%);
+    margin: 24px auto 0;
+    padding: 16px 18px;
+    border: 1px solid rgba(66, 182, 173, 0.34);
+    border-radius: 14px;
+    background: rgba(231, 248, 245, 0.92);
+    color: #176e68;
+    font-weight: 600;
+}
+
 #formAgendamento {
     display: grid;
     width: min(620px, 100%);

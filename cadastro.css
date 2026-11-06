@@ -99,6 +99,13 @@ h1::after {
     content: "";
 }
 
+.nota-cadastro {
+    width: min(560px, 100%);
+    margin: -8px auto 18px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
 #formCadastro {
     display: grid;
     width: min(560px, 100%);
