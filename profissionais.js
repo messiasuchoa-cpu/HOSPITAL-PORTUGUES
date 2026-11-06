@@ -42,7 +42,7 @@ document.querySelectorAll(".botao-agendamento").forEach((botao) => {
                 return;
             }
 
-            const cadastro = new URL("05-cadastro.html", window.location.href);
+            const cadastro = new URL("cadastro.html", window.location.href);
             cadastro.searchParams.set("retorno", "agendamento");
             cadastro.searchParams.set("especialidade", especialidade);
             window.location.assign(cadastro.href);

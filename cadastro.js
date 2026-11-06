@@ -21,7 +21,7 @@ formularioCadastro.addEventListener("submit", (evento) => {
     formularioCadastro.reset();
 
     if (parametrosCadastro.get("retorno") === "agendamento") {
-        const destino = new URL("06-agendamento.html", window.location.href);
+        const destino = new URL("agendamento.html", window.location.href);
         const especialidade = parametrosCadastro.get("especialidade");
 
         if (especialidade) {
