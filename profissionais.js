@@ -34,7 +34,7 @@ document.querySelectorAll(".botao-agendamento").forEach((botao) => {
         const especialidade = botao.closest(".card").dataset.especialidade;
 
         try {
-            const destino = new URL("06-agendamento.html", window.location.href);
+            const destino = new URL("agendamento.html", window.location.href);
             destino.searchParams.set("especialidade", especialidade);
 
             if (localStorage.getItem(chaveCadastro) === "true") {

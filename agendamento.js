@@ -5,7 +5,7 @@ const parametrosAgendamento = new URLSearchParams(window.location.search);
 
 try {
     if (localStorage.getItem(chaveCadastro) !== "true") {
-        const cadastro = new URL("05-cadastro.html", window.location.href);
+        const cadastro = new URL("cadastro.html", window.location.href);
         cadastro.searchParams.set("retorno", "agendamento");
 
         const especialidade = parametrosAgendamento.get("especialidade");
